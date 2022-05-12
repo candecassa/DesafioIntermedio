@@ -1,0 +1,27 @@
+{% extends "App/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>BUSQUEDA DE PROFES: </h1>
+
+<form action="{% url 'buscar' %}" method="GET">
+
+   <p></p><input type="text" name="apellido" placeholder="Buscar..."></p>
+   <p><input type="submit" value="Buscar"></p
+
+</form>
+
+{% if respuesta %}
+     <p style="color:red">No se ingreso ningun apellido</p>
+     
+{% endif %}
+
+{% endblock %} 
+
+{% block titulo %}
+
+    <h1> BIENVENIDO AL CURSO PYTHON 2022 </h1>
+
+{% endblock %} 

@@ -1,0 +1,27 @@
+{% extends "App/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Profes encontrados: </h1>
+
+{% if profesor %}
+{% for profe in profesor %}
+
+    <p>{{profe.nombre}} {{profe.apellido}}</p>
+
+{% endfor %}
+
+
+{% else %}
+
+    <p>No hay profesores con ese apellido</p>
+
+{% endif %}
+
+{% endblock %} 
+
+{% block titulo %}
+
+{% endblock %} 

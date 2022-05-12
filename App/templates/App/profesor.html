@@ -1,0 +1,26 @@
+{% extends "App/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'profesor' %}" method="POST">{% csrf_token %}
+
+    <table>
+        {{formulario.as_table}}
+    </table>
+    <input type="submit" value="ENVIAR">
+
+</form>
+
+
+{% endblock %} 
+
+<h1>PROFESORES!</h1>
+
+
+{% block titulo %}
+
+
+
+{% endblock %} 
